@@ -20,10 +20,10 @@
     "react-slick": "^0.30.3",
     "react-vertical-timeline-component": "^3.5.3",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4",
-    "homepage": "https://selvakrishna20.github.io/selvakrishna"
+    "web-vitals": "^2.1.4"
 
   },
+  "homepage": "https://selvakrishna7.github.io/selvakrishna",
   "scripts": {
   "start": "react-scripts start",
   "build": "react-scripts build",
