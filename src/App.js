@@ -39,7 +39,7 @@ function App() {
 
   useEffect(() => {
     animateNumber(1900, 2000, 1000);
-  }, []);
+  }, []); // Empty dependency array to run only once on component mount
 
   const actions = [
     {
@@ -104,7 +104,8 @@ function App() {
               color: "#fff", // Icon color
               "&:hover": {
                 backgroundColor: "#575757", // Darker shade on hover
-              }, "@media (max-width: 480px)": {
+              },
+              "@media (max-width: 480px)": {
                 width: 48, // Smaller buttons for mobile
                 height: 48,
               },
