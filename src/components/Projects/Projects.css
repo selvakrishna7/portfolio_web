@@ -1,0 +1,95 @@
+.App.light .project-page {
+  /* background-color: #f4f4f4; */
+  padding: 30px;
+}
+.App.dark .project-page {
+  /* background-color: #082a30; */
+  padding: 30px;
+}
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Grid Layout */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Project Card */
+.App.dark .project-card {
+  background: rgba(75, 75, 75, 0.2); /* Semi-transparent background (matches card-content) */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add depth */
+  padding: 20px; /* Inner spacing */
+  text-align: center; /* Center align content */
+  color: #ffffff; /* Text color for readability */
+  font-family: 'Arial', sans-serif; /* Consistent font */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover interaction */
+}
+
+.App.light .project-card {
+  background: rgba(75, 75, 75, 0.2); /* Semi-transparent dark gray */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for definition */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+  border-radius: 10px; /* Smooth rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+  padding: 20px; /* Space inside the card */
+  text-align: center; /* Center align content */
+  color: #ffffff; /* Ensure text is readable */
+  font-family: 'Arial', sans-serif; /* Consistent font style */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* View Site Button */
+.details-button {
+  display: inline-block;
+  background: linear-gradient(90deg, #2196f3, #21cbf3);
+  color: white;
+  text-decoration: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.details-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}

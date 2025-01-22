@@ -1,0 +1,234 @@
+/* Portfolio Container */
+.portfolio-design-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+
+  
+  .vertical-text {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: rotate(-90deg) translateY(-50%);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+  }
+  
+  /* Shared styles for light and dark modes */
+  .main-title {
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .main-title .highlighted-text {
+    color: inherit; /* Default to parent color unless overridden */
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 52%;
+    /* left: 43%; */
+    transform: translate(-50%, -50%);
+    font-family: 'Cursive', serif;
+    font-size: 2rem; /* Adjusted font size for better visibility */
+    font-weight: bold; /* Ensure it's bold to stand out */
+    font-style: italic;
+    color: inherit; /* Inherits color from the parent (light/dark mode) */
+    letter-spacing: 0.1em; /* Slight letter spacing for readability */
+    transition: color 0.3s ease, transform 0.3s ease, font-size 0.3s ease;
+  }
+  
+  .subtitle {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    letter-spacing: 0.2em;
+  }
+  
+  /* Dark theme styles */
+  .App.dark .main-title {
+    color: rgb(87, 87, 87);
+  }
+  
+  .App.dark .main-title .highlighted-text {
+    color: rgb(113, 113, 113);
+  }
+  
+  .App.dark .overlay-text {
+    color: burlywood;
+  }
+  
+  .App.dark .subtitle {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Light theme styles */
+  .App.light .main-title {
+    color: #b4b4b4; /* Dark text for light mode */
+  }
+  
+  .App.light .main-title .highlighted-text {
+    color: #555; /* Slightly muted highlight for light mode */
+  }
+  
+  .App.light .overlay-text {
+    color: rgba(0, 0, 0, 0.6); /* Subtle overlay text */
+  }
+  
+  .App.light .subtitle {
+    color: rgba(0, 0, 0, 0.7); /* Darker subtitle for readability */
+  }
+  .App.light .highlighted-name {
+    color: #444444; 
+    font-weight: bold;
+  }
+  
+  .App.dark .highlighted-name {
+    color: #c9c9c9; 
+    /* font-weight: bold; */
+  }
+  
+  .highlighted-text {
+    color: #8e8a4a; /* Cyan color */
+    
+  }
+  /* Fade-in and sliding animation */
+  .App.dark .main-title,
+  .App.dark .overlay-text,
+  .App.dark .subtitle,
+  .App.light .main-title,
+  .App.light .overlay-text,
+  .App.light .subtitle {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-60px); /* Start slightly off to the left */
+    filter: blur(5px); /* Start with slight blur */
+    animation: fadeInHorizontal 1.5s ease-out forwards; /* Smooth fade-in animation */
+    font-family: "Sacramento";
+  }
+  
+  @keyframes fadeInHorizontal {
+    0% {
+      opacity: 0;
+      transform: translateX(-60px); /* Slightly off-screen */
+      filter: blur(5px); /* Blurry start */
+    }
+    70% {
+      opacity: 0.7;
+      transform: translateX(-10px); /* Almost at final position */
+      filter: blur(2px); /* Reduce blur */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* Final position */
+      filter: blur(0); /* No blur */
+    }
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 1200px) {
+    header {
+      padding: 15px 25px;
+    }
+  
+    .nav-bar button {
+      font-size: 0.9rem;
+      margin: 0 8px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .portfolio-design-container {
+      padding: 20px;
+    }
+  
+    .main-title {
+      font-size: 5rem;
+    }
+  
+    .subtitle {
+      font-size: 1.4rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 20px;
+    }
+  
+    .nav-bar {
+      margin-top: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  
+    .nav-bar button {
+      margin: 5px 10px;
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+  
+    .theme-switch-wrapper {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+  
+    .main-title {
+      font-size: 3.5rem;
+    }
+  
+    .overlay-text {
+      font-size: 1.3rem;
+      top:51%
+    }
+    .highlighted-name {
+      font-size: 2.5rem; /* Smaller font size for mobile */
+    }
+  
+    .main-title {
+      font-size: 2.5rem; /* Adjust title font size for mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main-title {
+      font-size: 2.5rem;
+    }
+  
+    .overlay-text {
+      font-size: 1rem;
+    }
+  
+    .subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .vertical-text {
+      font-size: 0.6rem;
+      left: 10px;
+    }
+    .highlighted-name {
+      font-size: 2rem; /* Even smaller font size for very small screens */
+    }
+  
+    .main-title {
+      font-size: 2rem; /* Even smaller font size for very small screens */
+    }
+  }
+  

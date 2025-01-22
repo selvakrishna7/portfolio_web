@@ -1,0 +1,53 @@
+.App.dark .scroll-container {
+  text-align: center;
+  padding: 20px;
+  display: grid;
+  gap: 10% !important;
+  /* background-color: #082a30; */
+}
+.App.light .scroll-container {
+  text-align: center;
+  padding: 20px;
+  display: grid;
+  gap: 10% !important;
+  /* background-color: #f4f4f4; */
+}
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.scroll-wrapper {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.scroll-content {
+  display: flex;
+  gap: 20px;
+  animation: scroll-infinite 15s linear infinite;
+}
+
+.business-logo {
+  min-width: 150px;
+  max-width: 150px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.business-logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Keyframe animation for infinite scroll */
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

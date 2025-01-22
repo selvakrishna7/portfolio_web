@@ -1,0 +1,85 @@
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Light mode background */
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .App.dark header {
+    background-color: rgba(30, 30, 30, 0.9); /* Dark mode background */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Logo */
+  .logo h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: inherit;
+    margin: 0;
+  }
+  
+  /* Navigation Bar */
+  .nav-bar {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-btn {
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hamburger Menu for Mobile */
+  .mobile-menu-toggle {
+    display: none;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .nav-bar {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      background: rgba(255, 255, 255, 0.95);
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px 0;
+      z-index: 99;
+    }
+  
+    .nav-bar.open {
+      display: flex;
+    }
+  
+    .mobile-menu-toggle {
+      display: block;
+    }
+  
+    .menu-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: inherit;
+    }
+  }
+  

@@ -1,0 +1,217 @@
+
+
+.App.light .experience-container {
+  /* background-color: #fff; */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* background-color: #f4f4f4; */
+
+}
+.App.dark .experience-container {
+  /* background-color: #fff; */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* background-color: #082a30; */
+
+}
+
+.title{
+  text-transform: inherit;
+  letter-spacing: 0.025em;
+  font-size: 4.6rem;
+  margin-bottom: 3rem;
+  color: black;
+}
+
+/* Card styles */
+.experience-card {
+  background-color: rgba(75, 75, 75, 0.2); /* Semi-transparent background */
+  padding: 20px; /* Spacing inside the card */
+  margin-bottom: 20px; /* Spacing between cards */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow for depth */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For older Safari versions */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for definition */
+  color: #ffffff; /* Ensure text is readable on a dark background */
+  font-family: Arial, sans-serif; /* Specify a font for consistency */
+}
+
+
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.company-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.experience-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.company-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.date {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.skills {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills li {
+  background-color: #e0e7ff;
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.description {
+  margin-top: 10px;
+  color: #666;
+}
+
+.experience-image {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.details-button {
+  margin-top: 15px;
+  background: linear-gradient(90deg, #4caf4f1c, #81c7841e); /* Gradient colors */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.details-button:hover {
+  transform: scale(1.05); /* Slight enlargement on hover */
+  box-shadow: 0 6px 10px rgba(34, 34, 34, 0.25); /* Elevated shadow on hover */
+}
+
+/* Updated Modal Styles */
+.details-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Darker overlay for better focus */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in effect */
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative; /* Needed for close button placement */
+  animation: slideUp 0.4s ease-out; /* Smooth slide-up animation */
+}
+
+.modal-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.modal-content .company-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.modal-content .date {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.details-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Close button */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #583bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.close-button:hover {
+  background: #acc0ff;
+  transform: scale(1.1); /* Slightly enlarge the button */
+}
+
+/* Modal Animations */
+@keyframes fadeIn {
+  from {
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

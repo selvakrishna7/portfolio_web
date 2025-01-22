@@ -1,0 +1,126 @@
+/* General Section Styling */
+.section.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  z-index: 0;
+}
+
+/* Full-Screen Video Background */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire screen */
+  z-index: -1; /* Position the video behind all content */
+}
+
+/* Light and Dark Modes */
+.App.light .section.about {
+  color: #333;
+}
+
+.App.dark .section.about {
+  color: #eaeaea;
+}
+
+/* About Container */
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1; /* Ensure content is above the video */
+}
+
+/* About Text */
+.about-text {
+  max-width: 500px;
+}
+
+.about-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.App.light .about-title {
+  color: #8e8a4a; /* Light mode heading */
+}
+
+.App.dark .about-title {
+  color: #f5deb3; /* Dark mode heading */
+}
+
+.about-description {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.about-cta {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.about-cta:hover {
+  background-color: #0056b3;
+}
+
+/* About Photo */
+.about-photo {
+  display: flex;
+  justify-content: center;
+}
+
+.about-image {
+  width: 240px;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-photo img {
+    max-width: 80%; /* Reduce image size on smaller screens */
+    height: auto;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .about-description {
+    font-size: 1.1rem;
+  }
+}
