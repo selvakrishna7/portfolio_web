@@ -8,9 +8,9 @@ const Contact = () => {
       <h2 className="section-title">contact</h2>
       </div>
       <div className="contact-container1">
-      <div className="contact-image">
+      {/* <div className="contact-image">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShBiYXI1vyEb1eh9-95NqaUPVnPi0dYUxmHw&s" alt="Your Image"/>
-      </div>
+      </div> */}
 
       <div className="contact-form-container">
         <div className="form-card">
