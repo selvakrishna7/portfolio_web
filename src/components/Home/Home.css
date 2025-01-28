@@ -92,18 +92,25 @@
   .App.light .subtitle {
     color: rgba(0, 0, 0, 0.7); /* Darker subtitle for readability */
   }
-  .App.light .highlighted-name {
-    color: #444444; 
-    font-weight: bold;
-  }
   
+  .App.light .highlighted-name {
+    background: linear-gradient(to bottom, #39ffec, #1f7e74);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* font-weight: bold; Uncomment this if needed */
+}
   .App.dark .highlighted-name {
-    color: #c9c9c9; 
-    /* font-weight: bold; */
-  }
+    background: linear-gradient(to bottom, #39ffec, #044942);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* font-weight: bold; Uncomment this if needed */
+}
+
   
   .highlighted-text {
-    color: #8e8a4a; /* Cyan color */
+    color: #000000; /* Cyan color */
     
   }
   /* Fade-in and sliding animation */

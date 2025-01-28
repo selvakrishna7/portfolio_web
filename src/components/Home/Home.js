@@ -6,7 +6,7 @@ const Home = ({ number }) => {
     <section id="home" className="section home">
       <div className="portfolio-design-container">
         <div className="main-title">
-          <span className="highlighted-name">SELVA'S </span> PORTFOLIO
+          <span className="highlighted-name">SELVA'S PORTFOLIO </span> 
         </div>
         <div className="subtitle">Selva Krishna | Software Developer</div>
         <div className="subtitle">

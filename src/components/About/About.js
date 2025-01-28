@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-
+import image_me from '../1720025962820.jpeg'
 const About = () => {
   return (
     <section id="about" className="section about">
@@ -18,19 +18,20 @@ const About = () => {
         <div className="about-text">
           <h2 className="section-title">About Me</h2>
           <p className="about-description">
-            Hi, I'm Selva, a passionate backend developer with a keen interest
-            in creating and selling portfolio solutions. My goal is to
-            transition into freelancing and help individuals and businesses
-            build seamless web experiences. Welcome to my creative journey!
-          </p>
+    Hi, I'm Selva, a backend developer with 2+ years of experience in crafting robust, scalable, and efficient web solutions. 
+    I specialize in working with Django, MongoDB,React-JS, AWS EC2, and have hands-on experience in integrating React.js for full-stack projects.
+    With a strong passion for innovation, I aim to simplify complex problems and deliver seamless digital experiences.
+    As I transition into freelancing, my mission is to help individuals and businesses bring their ideas to life through tailored, high-quality solutions. 
+    Let's collaborate and turn your vision into reality. Welcome to my journey!
+</p>
           <a href="#contact" className="about-cta">Contact Me</a>
         </div>
         <div className="about-photo">
-          <img
-            className="about-image"
-            src="https://play-lh.googleusercontent.com/tvN_cFVM8jndf6Tizvx13lXryYNc0DsQj4xSqk7nHE9OSceM8R5RcK9RCtsRxJ2tdss=w240-h480-rw"
-            alt="Selva"
-          />
+        <img
+  className="about-image"
+  src={image_me}
+  alt="Selva"
+/>
         </div>
       </div>
     </section>

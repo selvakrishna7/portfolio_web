@@ -71,10 +71,10 @@ function App() {
       <Header isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
       <Home number={number} />
       <About />
-      <Certificate />
+      <LanguagesSlider />
       <Experience />
       <Projects />
-      <LanguagesSlider />
+      <Certificate />
       <Contact />
       <Footer />
       <SpeedDial

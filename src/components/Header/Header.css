@@ -33,9 +33,10 @@ header {
     gap: 20px;
   }
   
-  .nav-btn {
+  .App.dark .nav-btn {
     border: none;
     background: transparent;
+    color: rgb(240, 240, 240);
     font-size: 1rem;
     padding: 10px 20px;
     cursor: pointer;
@@ -44,7 +45,19 @@ header {
     font-weight: bold;
     transition: color 0.3s ease, transform 0.3s ease;
   }
-  
+  .App.light .nav-btn {
+    border: none;
+    background: transparent;
+    color: rgb(63, 63, 63);
+
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
   /* Hamburger Menu for Mobile */
   .mobile-menu-toggle {
     display: none;

@@ -12,7 +12,7 @@
   /* background-color: #082a30; */
 }
 .App.light .certificate-section {
-  padding: 5rem 0;
+  padding: 3rem 0;
   text-align: center;
   /* background-color: #f4f4f4; */
 }
@@ -28,7 +28,9 @@
   letter-spacing: 0.025em; /* Slight spacing for readability */
   font-size: 3.8rem; /* Large font size for emphasis */
   margin-bottom: 3rem; /* Space below the title */
-  background: linear-gradient(180deg, #094e53, #1de4eb); 
+  /* background: linear-gradient(180deg, #094e53, #1de4eb);  */
+  background: linear-gradient(to bottom, #39ffec, #0d8176);
+
   /* background: linear-gradient(180deg, #414141, #444444);  */
 
   -webkit-background-clip: text; /* Clip the gradient to the text */
@@ -41,7 +43,9 @@
   font-size: 3.8rem; /* Large font size for emphasis */
   margin-bottom: 3rem; /* Space below the title */
   /* background: linear-gradient(180deg, #c5c5c5, #ffffff); */
-  background: linear-gradient(180deg, #094e53, #1de4eb); 
+  /* background: linear-gradient(180deg, #094e53, #1de4eb);  */
+  background: linear-gradient(to bottom, #39ffec, #044942);
+
 
   /* background: linear-gradient(180deg, #a19a33, #f7ffbd); */
 
